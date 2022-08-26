@@ -1,16 +1,19 @@
-﻿//Punto 1
-Console.WriteLine("Ingrese un numero para calcular su cuadrado:");
-try{
-var num=Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("El resultado es: "+ (num*num));
+﻿//Punto 3
+
+try
+{
+    Console.WriteLine("Ingrese kilometros recorridos: ");
+    int num = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Ingrese litros empleados: ");
+    int num2 = Convert.ToInt32(Console.ReadLine());
+    int resultado = num * num2;
+    Console.WriteLine("Resultado: " + resultado);
 }
-catch(FormatException){
-    Console.WriteLine("ERROR: Se ha ingresado un caracter erroneo");
+catch (Exception ex)
+{
+    Console.WriteLine("Error: " + ex.Message);
 }
-catch(OverflowException){
-    Console.WriteLine("ERROR: Se ha excedido el rango del tipo de dato declarado");
-}
-catch(Exception ex){
-    throw ex;
-}
+
+
+
 
