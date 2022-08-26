@@ -1,18 +1,17 @@
-﻿//Punto 3
+﻿//Punto 4 
+using System.Net;
+using System.Text.Json;
+using System.Collections.Generic;
+using System.IO;
+using System.Text.Json.Serialization;
 
-try
-{
-    Console.WriteLine("Ingrese kilometros recorridos: ");
-    int num = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Ingrese litros empleados: ");
-    int num2 = Convert.ToInt32(Console.ReadLine());
-    int resultado = num * num2;
-    Console.WriteLine("Resultado: " + resultado);
-}
-catch (Exception ex)
-{
-    Console.WriteLine("Error: " + ex.Message);
-}
+string url =@"https://apis.datos.gob.ar/georef/api/provincias?campos=id,nombre";
+var request = (HttpWebRequest)WebRequest.Create(url);
+request.Method = "GET";
+request.ContentType = "application/json";
+request.Accept = "application/json";
+
+
 
 
 
