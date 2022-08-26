@@ -1,9 +1,3 @@
-// Root myDeserializedClass = JsonSerializer.Deserialize<Root>(myJsonResponse);
-
-using System.Net;
-using System.Text.Json;
-using System.Collections.Generic;
-using System.IO;
 using System.Text.Json.Serialization;
 
 public class Parametros
@@ -38,4 +32,3 @@ public class Root
     [JsonPropertyName("total")]
     public int Total { get; set; }
 }
-
